@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <style>
+        .box{
+            width: 500px;
+            height: 500px;
+            background: #ccc;
+            margin: 100vh auto;
+            border: 1px solid #000;
+        }
+        .circle{
+            width: 100px;
+            height: 100px;
+            background: #ff0;
+            border-radius: 50%;
+        }
+    </style>
+        <div class="box">
+        <div class="circle"></div>
+        </div>
+    <script>
+        gsap.to('.circle',{
+            scrollTriger:{
+                trigger:".box", //트리거는 기준점
+                start:"0% 0%",
+                end:"100% 20%",
+                markers:true,
+            },
+            xPercent:100,
+        })
+    </script>
+
+</body>
+</html>
